@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8" />
@@ -8,9 +8,7 @@
 <style>
   :root{
     --blue:#083a66;
-    --accent:#0b70ff;
     --whatsapp:#25D366;
-    --card-bg:#ffffff;
     --muted:#666;
     --radius:12px;
     --max-width:1100px;
@@ -28,7 +26,7 @@
 
   /* Serviços */
   .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:28px 0;padding:22px;background:transparent}
-  .card{background:var(--card-bg);border-radius:var(--radius);padding:20px;box-shadow:0 6px 18px rgba(8,58,102,.06);text-align:center;transform:translateY(18px);opacity:0;transition:all .6s cubic-bezier(.2,.9,.2,1)}
+  .card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:0 6px 18px rgba(8,58,102,.06);text-align:center;transform:translateY(18px);opacity:0;transition:all .6s cubic-bezier(.2,.9,.2,1)}
   .card.show{transform:none;opacity:1}
   .iconwrap{width:68px;height:68px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px;background:linear-gradient(180deg,rgba(10,58,102,.06),rgba(11,95,191,.05))}
   .card h3{margin:6px 0 8px;font-size:18px;color:var(--blue)}
@@ -63,6 +61,10 @@
     .brand{flex-direction:column;align-items:flex-start;gap:10px}
     form{grid-template-columns:1fr}
   }
+
+  /* small helpers */
+  h2{margin:0 0 10px 0}
+  .muted{color:var(--muted)}
 </style>
 </head>
 <body>
@@ -133,9 +135,9 @@
     <section aria-labelledby="galeria">
       <h2 id="galeria" style="margin:22px 0 10px;color:var(--blue)">Galeria</h2>
       <div class="gallery" id="gallery">
-        <img data-animate src="https://images.unsplash.com/photo-1598302736144-98f010f6a9d6?auto=format&fit=crop&w=1200&q=70" alt="Sala de casa com ar-condicionado" />
-        <img data-animate src="https://images.unsplash.com/photo-1579684289793-3b9a52b7b9f3?auto=format&fit=crop&w=1200&q=70" alt="Salão de beleza com ar-condicionado" />
-        <img data-animate src="https://images.unsplash.com/photo-1556228720-01c8d9b72a7f?auto=format&fit=crop&w=1200&q=70" alt="Farmácia/loja ampla com ar-condicionado" />
+        <img data-animate src="https://i.pinimg.com/564x/17/b3/55/17b3550f758f5c9fa4df1ff0dbb54e77.jpg" alt="Casa com ar-condicionado" />
+        <img data-animate src="https://i.pinimg.com/564x/48/55/8c/48558c56b7f79ce0a6e81f14f7269d0b.jpg" alt="Salão de beleza com ar-condicionado" />
+        <img data-animate src="https://i.pinimg.com/564x/54/ba/1f/54ba1f33a3f463cf4081eae3cb6e5933.jpg" alt="Farmácia/loja ampla com ar-condicionado" />
       </div>
     </section>
 
@@ -198,16 +200,14 @@
   window.addEventListener('scroll', animateOnScroll);
   window.addEventListener('load', () => { animateOnScroll(); });
 
-  // formulário: exemplo de captura local (sem backend)
+  // formulário: abre WhatsApp já com mensagem (sem backend)
   document.getElementById('leadForm').addEventListener('submit', function(e){
     e.preventDefault();
     const data = new FormData(this);
-    // Exemplo: abrir o WhatsApp já com mensagem (pode adaptar)
     const nome = encodeURIComponent(data.get('nome')||'');
     const tel = encodeURIComponent(data.get('telefone')||'');
     const msg = encodeURIComponent(data.get('mensagem')||'Solicito orçamento');
     const text = `Olá, sou ${nome}. ${msg}. Telefone: ${tel}`;
-    // Abre WhatsApp com mensagem para facilitar contato
     window.open('https://wa.me/5517996439982?text=' + text, '_blank');
   });
 </script>
