@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon simples em SVG embutido (dispensa arquivo externo) -->
+  <!-- Favicon simples em SVG embutido -->
   <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b0e3f'/><text x='50' y='55' font-size='54' text-anchor='middle' fill='%23fff' font-family='Poppins, Arial'>O</text></svg>">
 
   <style>
@@ -35,7 +35,7 @@
       -moz-osx-font-smoothing:grayscale;
       overflow-x:hidden;
     }
-    a{color:inherit}
+    a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
 
     /* Header */
@@ -54,15 +54,12 @@
     }
     .brand{display:flex;align-items:center;gap:12px}
     .brand img{height:48px;width:auto;display:block}
-    .brand .text{color:#fff}
     nav{display:flex;align-items:center;gap:14px}
-    nav a{color:rgba(255,255,255,0.92);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;transition:all .18s}
+    nav a{color:rgba(255,255,255,0.92);padding:8px 12px;border-radius:8px;font-weight:600;transition:all .18s}
     nav a:hover{background:rgba(255,255,255,0.06)}
     .btn-primary{
-      background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:8px;
+      background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;
     }
-
-    /* Mobile nav */
     .nav-toggle{display:none;background:transparent;border:0;color:#fff;font-size:22px}
     @media (max-width:880px){
       nav{display:none}
@@ -88,7 +85,6 @@
     .stat{background:var(--card);padding:10px 14px;border-radius:10px;box-shadow:var(--shadow);min-width:110px;text-align:center}
     .stat strong{display:block;font-size:1.1rem;color:var(--primary)}
 
-    /* Hero image card */
     .hero-card{
       border-radius:14px;
       overflow:hidden;
@@ -96,13 +92,7 @@
       background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
       position:relative;
     }
-    .hero-media{
-      width:100%;
-      height:100%;
-      display:block;
-      aspect-ratio:4/3;
-      object-fit:cover;
-    }
+    .hero-media{width:100%;height:100%;display:block;aspect-ratio:4/3;object-fit:cover}
     .hero-badge{
       position:absolute;left:12px;top:12px;background:var(--primary);color:#fff;padding:8px 10px;border-radius:10px;font-weight:700;font-size:0.9rem;
     }
@@ -138,11 +128,9 @@
     .cta .cta-text{max-width:700px}
     .cta h2{margin:0 0 6px;font-size:1.2rem}
     .cta p{margin:0;color:rgba(255,255,255,0.92)}
-    .cta .cta-actions{display:flex;gap:12px;align-items:center}
 
     footer{padding:18px;text-align:center;color:#6b7280;background:transparent;margin-top:8px}
 
-    /* WhatsApp float */
     .whatsapp-float{
       position:fixed;right:18px;bottom:18px;background:var(--accent-2);color:#fff;width:52px;height:52px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 8px 20px rgba(37,211,102,0.14)
     }
@@ -155,7 +143,6 @@
     .modal .modal-side{padding:14px;color:#fff;background:linear-gradient(180deg,#07102a,#07142e)}
     .modal .close{background:rgba(255,255,255,0.06);border:0;color:#fff;padding:8px 10px;border-radius:10px;font-weight:700;cursor:pointer}
 
-    /* Responsive */
     @media (max-width:960px){
       .hero{grid-template-columns:1fr;min-height:56vh;padding-top:28px;padding-bottom:28px}
       .modal .modal-card{grid-template-columns:1fr}
@@ -165,7 +152,6 @@
       .hero h1{font-size:1.45rem}
     }
 
-    /* small animations */
     .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
     .reveal.visible{opacity:1;transform:none}
 
@@ -176,8 +162,7 @@
 
   <header>
     <div class="brand">
-      <!-- Agora usamos o arquivo logo-onear.png — coloque o arquivo na raiz do site -->
-      <img src="logo-onear.png" alt="One'Ar — logo" onerror="this.dataset.missing='1';this.style.display='none'">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4434f3?auto=format&fit=crop&w=80&h=80" alt="One'Ar — logo">
       <div class="text" style="line-height:1">
         <div style="font-weight:700;color:#fff">One'Ar</div>
         <div style="font-size:12px;color:rgba(255,255,255,0.85)">Climatização profissional</div>
@@ -200,7 +185,7 @@
       <div class="hero-left">
         <span class="eyebrow">Soluções em climatização • São José do Rio Preto</span>
         <h1>Climatização perfeita para sua casa ou empresa</h1>
-        <p class="lead">Somos especialistas em instalação, higienização, manutenção preventiva e conserto de componentes eletrônicos de ar-condicionado. Garantimos conforto, eficiência energética e ar de qualidade.</p>
+        <p class="lead">Especialistas em instalação, higienização, manutenção preventiva e conserto de componentes eletrônicos de ar-condicionado. Garantimos conforto, eficiência e ar de qualidade.</p>
 
         <div class="hero-ctas">
           <a class="btn-primary" href="https://wa.me/5517996439982" target="_blank" rel="noopener noreferrer">📲 Solicitar Orçamento</a>
@@ -225,11 +210,7 @@
 
       <div class="hero-card" aria-hidden="true">
         <div class="hero-badge">Instalação & Conserto • Garantia</div>
-        <picture>
-          <source srcset="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop 1200w, https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop 800w"
-                  sizes="(min-width:960px) 420px, 100vw">
-          <img class="hero-media" loading="lazy" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="Técnico instalando ar-condicionado profissionalmente">
-        </picture>
+        <img class="hero-media" src="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?auto=format&fit=crop&w=800&h=600" alt="Técnico instalando ar-condicionado profissionalmente">
       </div>
     </section>
 
@@ -237,28 +218,33 @@
     <section id="servicos" class="services" aria-labelledby="servicos-title">
       <h2 id="servicos-title" style="margin-left:clamp(20px,4vw,48px);margin-bottom:12px;color:var(--primary)">Nossos Serviços</h2>
       <div class="services-grid" style="padding:0 clamp(20px,4vw,48px);">
-        <article class="card reveal" aria-labelledby="s1">
-          <h3 id="s1">Instalação Profissional</h3>
+        <article class="card reveal">
+          <h3>Instalação Profissional</h3>
+          <img src="https://images.unsplash.com/photo-1581091215362-0c6dbab41462?auto=format&fit=crop&w=400&h=300" alt="Instalação de ar-condicionado" style="border-radius:12px;margin-bottom:8px">
           <p>Montagem e instalação segura de aparelhos split e sistemas comerciais, com testes de performance e segurança elétrica.</p>
         </article>
 
-        <article class="card reveal" aria-labelledby="s2">
-          <h3 id="s2">Higienização Completa</h3>
+        <article class="card reveal">
+          <h3>Higienização Completa</h3>
+          <img src="https://images.unsplash.com/photo-1581091215370-66e636e5f531?auto=format&fit=crop&w=400&h=300" alt="Higienização de ar-condicionado" style="border-radius:12px;margin-bottom:8px">
           <p>Remoção de fungos, ácaros e odores por processos seguros que melhoram a qualidade do ar e a eficiência do equipamento.</p>
         </article>
 
-        <article class="card reveal" aria-labelledby="s3">
-          <h3 id="s3">Manutenção Preventiva</h3>
+        <article class="card reveal">
+          <h3>Manutenção Preventiva</h3>
+          <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4434f3?auto=format&fit=crop&w=400&h=300" alt="Manutenção preventiva" style="border-radius:12px;margin-bottom:8px">
           <p>Planos periódicos para reduzir falhas, otimizar consumo e prolongar a vida útil do equipamento.</p>
         </article>
 
-        <article class="card reveal" aria-labelledby="s4">
-          <h3 id="s4">Consertos Eletrônicos</h3>
+        <article class="card reveal">
+          <h3>Consertos Eletrônicos</h3>
+          <img src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=400&h=300" alt="Conserto de placa eletrônica" style="border-radius:12px;margin-bottom:8px">
           <p>Diagnóstico e recuperação de placas eletrônicas, componentes de inverter e sistemas VRF com peças de qualidade.</p>
         </article>
 
-        <article class="card reveal" aria-labelledby="s5">
-          <h3 id="s5">Elétrica Aplicada</h3>
+        <article class="card reveal">
+          <h3>Elétrica Aplicada</h3>
+          <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4434f3?auto=format&fit=crop&w=400&h=300" alt="Projeto elétrico" style="border-radius:12px;margin-bottom:8px">
           <p>Projetos e correções elétricas específicas para instalações de climatização e refrigeração.</p>
         </article>
       </div>
@@ -268,35 +254,23 @@
     <section id="galeria" class="gallery-wrap" aria-labelledby="galeria-title">
       <h2 id="galeria-title" style="margin-left:clamp(20px,4vw,48px);margin-bottom:12px;color:var(--primary)">Galeria</h2>
       <div class="gallery-grid" style="padding:0 clamp(20px,4vw,48px);">
-        <div class="gallery-item" tabindex="0" role="button" data-src="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?q=80&w=1600&auto=format&fit=crop" data-caption="Instalação profissional">
-          <picture>
-            <source srcset="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?q=80&w=1200&auto=format&fit=crop 1200w" sizes="(min-width:960px) 420px, 100vw">
-            <img loading="lazy" alt="Técnico instalando ar-condicionado" src="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?q=80&w=800&auto=format&fit=crop">
-          </picture>
+        <div class="gallery-item" tabindex="0" role="button" data-src="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?auto=format&fit=crop&w=1600&h=1200" data-caption="Instalação profissional">
+          <img loading="lazy" alt="Técnico instalando ar-condicionado" src="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?auto=format&fit=crop&w=800&h=600">
           <div class="gallery-caption">Instalação profissional</div>
         </div>
 
-        <div class="gallery-item" tabindex="0" role="button" data-src="https://images.unsplash.com/photo-1598966843831-16e1b8df8b77?q=80&w=1600&auto=format&fit=crop" data-caption="Higienização eficiente">
-          <picture>
-            <source srcset="https://images.unsplash.com/photo-1598966843831-16e1b8df8b77?q=80&w=1200&auto=format&fit=crop 1200w" sizes="(min-width:960px) 420px, 100vw">
-            <img loading="lazy" alt="Técnico realizando limpeza" src="https://images.unsplash.com/photo-1598966843831-16e1b8df8b77?q=80&w=800&auto=format&fit=crop">
-          </picture>
+        <div class="gallery-item" tabindex="0" role="button" data-src="https://images.unsplash.com/photo-1598966843831-16e1b8df8b77?auto=format&fit=crop&w=1600&h=1200" data-caption="Higienização eficiente">
+          <img loading="lazy" alt="Técnico realizando limpeza" src="https://images.unsplash.com/photo-1598966843831-16e1b8df8b77?auto=format&fit=crop&w=800&h=600">
           <div class="gallery-caption">Higienização eficiente</div>
         </div>
 
-        <div class="gallery-item" tabindex="0" role="button" data-src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?q=80&w=1600&auto=format&fit=crop" data-caption="Componentes e diagnóstico">
-          <picture>
-            <source srcset="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?q=80&w=1200&auto=format&fit=crop 1200w" sizes="(min-width:960px) 420px, 100vw">
-            <img loading="lazy" alt="Equipamento de climatização" src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?q=80&w=800&auto=format&fit=crop">
-          </picture>
+        <div class="gallery-item" tabindex="0" role="button" data-src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=1600&h=1200" data-caption="Componentes e diagnóstico">
+          <img loading="lazy" alt="Equipamento de climatização" src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=800&h=600">
           <div class="gallery-caption">Componentes e diagnóstico</div>
         </div>
 
-        <div class="gallery-item" tabindex="0" role="button" data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1600&auto=format&fit=crop" data-caption="Projetos comerciais">
-          <picture>
-            <source srcset="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop 1200w" sizes="(min-width:960px) 420px, 100vw">
-            <img loading="lazy" alt="Instalação comercial" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop">
-          </picture>
+        <div class="gallery-item" tabindex="0" role="button" data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&h=1200" data-caption="Projetos comerciais">
+          <img loading="lazy" alt="Instalação comercial" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&h=600">
           <div class="gallery-caption">Projetos comerciais</div>
         </div>
       </div>
@@ -333,7 +307,7 @@
       </div>
       <div class="cta-actions">
         <a class="btn-primary" href="https://wa.me/5517996439982" target="_blank" rel="noopener noreferrer">📲 Falar no WhatsApp</a>
-        <a style="padding:10px 14px;border-radius:10px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12);text-decoration:none;" href="mailto:contato@onear.com.br">✉️ Enviar E-mail</a>
+        <a style="padding:10px 14px;border-radius:10px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12);" href="mailto:contato@onear.com.br">✉️ Enviar E-mail</a>
       </div>
     </section>
 
@@ -343,104 +317,9 @@
     <p>© 2025 One’Ar – Climatização profissional • Atendimento: São José do Rio Preto e região</p>
   </footer>
 
-  <!-- Floating WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/5517996439982" target="_blank" aria-label="Fale conosco no WhatsApp" rel="noopener noreferrer">💬</a>
-
-  <!-- Modal Lightbox -->
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-card" role="document">
-      <img id="modalImg" class="modal-img" alt="">
-      <aside class="modal-side">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
-          <strong id="modalCaption" style="font-size:1.05rem"></strong>
-          <button class="close" id="modalClose" aria-label="Fechar">Fechar ✕</button>
-        </div>
-        <p style="color:rgba(255,255,255,0.85);margin:0;font-size:0.95rem">Agende uma visita técnica ou peça um orçamento pelo WhatsApp. Atendimento rápido e garantia de serviço.</p>
-        <div style="margin-top:12px">
-          <a class="btn-primary" href="https://wa.me/5517996439982" target="_blank" rel="noopener noreferrer">📲 Solicitar Orçamento</a>
-        </div>
-      </aside>
-    </div>
-  </div>
-
-  <script>
-    // Mobile nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const nav = document.querySelector('nav');
-    navToggle && navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      if (nav.style.display === 'flex') { nav.style.display = ''; }
-      else { nav.style.display = 'flex'; nav.style.flexDirection = 'column'; nav.style.background = 'linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))'; nav.style.position='absolute'; nav.style.right='12px'; nav.style.top='62px'; nav.style.padding='10px'; }
-    });
-
-    // Reveal animation on scroll
-    const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
-      });
-    }, {threshold:0.12});
-    revealEls.forEach(el => io.observe(el));
-
-    // Lightbox for gallery
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modalImg');
-    const modalCaption = document.getElementById('modalCaption');
-    const modalClose = document.getElementById('modalClose');
-
-    function openModal(src, caption){
-      modalImg.src = src;
-      modalImg.alt = caption || 'Imagem da galeria';
-      modalCaption.textContent = caption || '';
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden','false');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal(){
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden','true');
-      modalImg.src='';
-      document.body.style.overflow = '';
-    }
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      const src = item.getAttribute('data-src');
-      const caption = item.getAttribute('data-caption');
-      item.addEventListener('click', () => openModal(src, caption));
-      item.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key===' ') { e.preventDefault(); openModal(src, caption); }});
-    });
-    modalClose && modalClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
-    document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
-
-    // Minimal focus trap for modal
-    modal.addEventListener('keydown', function(e){
-      if(e.key === 'Tab'){
-        e.preventDefault();
-        modalClose && modalClose.focus();
-      }
-    });
-
-    // --- IMAGE FALLBACK ---
-    const fallbackSVG = encodeURIComponent(
-      '<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"500\" viewBox=\"0 0 800 500\">' +
-      '<rect width=\"100%\" height=\"100%\" fill=\"#eef4fb\"/>' +
-      '<text x=\"50%\" y=\"50%\" font-family=\"Poppins,Arial\" font-size=\"28\" fill=\"#334155\" text-anchor=\"middle\" dominant-baseline=\"middle\">Imagem indisponível</text>' +
-      '</svg>'
-    );
-    const fallbackDataUri = 'data:image/svg+xml;utf8,' + fallbackSVG;
-
-    document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('error', function handleErr(){
-        if (this.dataset.fallbackApplied) return;
-        this.dataset.fallbackApplied = '1';
-        this.src = fallbackDataUri;
-        this.classList.add('img-placeholder');
-        this.alt = this.alt || 'Imagem indisponível';
-      }, {once:true});
-    });
-  </script>
 
 </body>
 </html>
+
 
