@@ -1,151 +1,200 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt‑BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>One'Ar | Climatização Profissional</title>
-<meta name="description" content="One'Ar - Instalação, higienização, manutenção e conserto de ar-condicionado. Conforto e ar puro.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device‑width, initial-scale=1.0">
+  <title>One’ar – Climatização perfeita para seu ambiente</title>
+  <style>
+    /* Reset simples */
+    * { margin: 0; padding: 0; box‑sizing: border-box; }
+    body { font-family: Arial, sans‑serif; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
 
-<style>
-:root {
-  --primary:#0b0e3f;
-  --accent:#00aaff;
-  --whatsapp:#25d366;
-  --bg:#f9fafb;
-  --card:#fff;
-  --shadow:0 8px 20px rgba(11,14,63,0.06);
-}
-body {
-  margin:0;
-  font-family:"Poppins",sans-serif;
-  background:var(--bg);
-  color:#0f1724;
-}
-a{text-decoration:none;color:inherit;}
-header {
-  background:var(--primary);
-  color:#fff;
-  padding:16px 24px;
-  text-align:center;
-  font-weight:700;
-  font-size:1.25rem;
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
-}
-section {padding:48px 24px;}
-h2 {color:var(--primary); margin-bottom:24px; text-align:center; font-size:1.8rem;}
-.services-grid, .test-grid {display:grid; gap:20px;}
-.services-grid {grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
-.card, .testimonial {
-  background:var(--card);
-  padding:20px;
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  text-align:center;
-  transition:transform .3s, box-shadow .3s;
-}
-.card:hover, .testimonial:hover {
-  transform:translateY(-6px);
-  box-shadow:0 12px 28px rgba(11,14,63,0.12);
-}
-.card img {width:80px;height:80px;object-fit:cover;border-radius:50%;margin-bottom:16px;}
-.card h3 {margin:12px 0 8px;color:var(--primary);}
-.card p {color:#4b5563; font-size:0.95rem; line-height:1.5;}
-.testimonial p {font-style:italic; color:#26303b; margin-bottom:12px;}
-.testimonial h4 {color:var(--primary); font-weight:600; margin:0;}
-.btn-primary {
-  background:var(--accent);
-  color:#fff;
-  padding:14px 24px;
-  border-radius:12px;
-  font-weight:700;
-  font-size:1rem;
-  display:inline-block;
-  transition:background .25s;
-}
-.btn-primary:hover {background:#008ecc;}
-.whatsapp-float {
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  background:var(--whatsapp);
-  color:#fff;
-  width:56px;
-  height:56px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:26px;
-  box-shadow:0 8px 20px rgba(37,211,102,0.25);
-  z-index:1000;
-}
-.cta-section {text-align:center; margin-top:32px;}
-footer {text-align:center; padding:18px; color:#6b7280;}
-@media(max-width:560px){h2{font-size:1.5rem;}}
-</style>
+    /* Cores conforme sua identidade: azul escuro + cromado */
+    :root {
+      --azul‑escuro: #0b1e3e;
+      --cromado: #bcbec0;
+      --branco: #ffffff;
+      --cinza‑claro: #f5f5f5;
+    }
+
+    header {
+      background: var(--azul‑escuro);
+      color: var(--branco);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header .logo {
+      max-width: 200px;
+      margin: 0 auto 20px;
+    }
+    header h1 {
+      font-size: 2em;
+    }
+    header p.lema {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 30px;
+    }
+    .servico {
+      background: var(--cinza‑claro);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .servico h3 {
+      margin-bottom: 15px;
+      color: var(--azul‑escuro);
+    }
+    .servico p {
+      color: #555;
+    }
+
+    .depoimentos {
+      background: var(--branco);
+      padding: 60px 20px;
+    }
+    .depoimentos h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--azul‑escuro);
+    }
+    .depoimento {
+      background: var(--cinza‑claro);
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    .depoimento p {
+      font-style: italic;
+      color: #444;
+    }
+    .depoimento .cliente {
+      margin-top: 15px;
+      font-weight: bold;
+      color: var(--azul‑escuro);
+    }
+
+    .missao‑valores {
+      padding: 60px 20px;
+      background: var(--cinza‑claro);
+    }
+    .missao‑valores h2 {
+      color: var(--azul‑escuro);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .missao‑valores p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      color: #555;
+    }
+
+    footer {
+      background: var(--azul‑escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+    footer a {
+      color: var(--cromado);
+    }
+  </style>
 </head>
 <body>
 
-<header>One'Ar - Climatização Profissional</header>
+  <header>
+    <div class="logo">
+      <!-- Substitua o src pela URL da sua logo conforme o link que você enviou -->
+      <img src="URL_DA_LOGO_AQUI" alt="Logo One’ar">
+    </div>
+    <h1>One’ar</h1>
+    <p class="lema">Climatização perfeita para seu ambiente.</p>
+    <p>Cidade: São José do Rio Preto ‑ SP</p>
+  </header>
 
-<!-- Serviços -->
-<section id="servicos">
-  <h2>Nossos Serviços</h2>
-  <div class="services-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091215362-0c6dbab41462?auto=format&fit=crop&w=80&h=80" alt="Instalação">
-      <h3>Instalação Profissional</h3>
-      <p>Montagem e instalação segura de aparelhos split e sistemas comerciais.</p>
+  <section>
+    <div class="container">
+      <h2>Nossos serviços</h2>
+      <div class="servicos-grid">
+        <div class="servico">
+          <h3>Instalação (Split, Piso‑Teto, Central)</h3>
+          <p>Instalação completa dos principais modelos de ar‑condicionado: split, piso‑teto e sistemas centrais.</p>
+        </div>
+        <div class="servico">
+          <h3>Higienização</h3>
+          <p>Limpeza e higienização de aparelhos e dutos para garantir ar saudável e ambiente livre de impurezas.</p>
+        </div>
+        <div class="servico">
+          <h3>Manutenção Preventiva</h3>
+          <p>Serviço regular para evitar falhas, melhorar eficiência e prolongar a vida útil dos equipamentos.</p>
+        </div>
+        <div class="servico">
+          <h3>Consertos Eletrônicos</h3>
+          <p>Reparo de placas, sistemas inverter e tecnologia VRF em aparelhos de diferentes marcas.</p>
+        </div>
+        <div class="servico">
+          <h3>Instalação Elétrica Aplicada a Ar‑Condicionado</h3>
+          <p>Projeto e instalação elétrica adequada para suportar sistemas de climatização com segurança e eficiência.</p>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091215370-66e636e5f531?auto=format&fit=crop&w=80&h=80" alt="Higienização">
-      <h3>Higienização Completa</h3>
-      <p>Remoção de fungos, ácaros e odores garantindo ar puro.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=80&h=80" alt="Consertos">
-      <h3>Consertos Eletrônicos</h3>
-      <p>Diagnóstico e reparo de placas eletrônicas, inverter e VRF.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=80&h=80" alt="Manutenção">
-      <h3>Manutenção Preventiva</h3>
-      <p>Planos periódicos para reduzir falhas e otimizar consumo.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Depoimentos -->
-<section id="depoimentos">
-  <h2>O que nossos clientes dizem</h2>
-  <div class="test-grid">
-    <div class="testimonial">
-      <p>“Excelente atendimento! A equipe da One’Ar foi atenciosa e pontual. Ar funcionando perfeitamente!”</p>
-      <h4>— Rodrigo S.</h4>
+  <section class="missao‑valores">
+    <div class="container">
+      <h2>Missão & Valores</h2>
+      <p>Na One’ar, temos como missão entregar **climatização perfeita para seu ambiente**, garantindo conforto, eficiência energética e atendimento transparente em São José do Rio Preto e região.</p>
+      <p>Nossos valores:<br>
+      • Honestidade no atendimento e orçamento.<br>
+      • Comprometimento com prazos e qualidade.<br>
+      • Transparência em todos os processos.<br>
+      • Valorização da satisfação do cliente.<br>
+      • Atualização técnica constante para oferecer o melhor das marcas como LG, Samsung, TCL, Carrier.</p>
     </div>
-    <div class="testimonial">
-      <p>“Fizeram a higienização do meu ar-condicionado e a diferença foi enorme! O ar ficou mais leve. Super recomendo!”</p>
-      <h4>— Jhenifer M.</h4>
+  </section>
+
+  <section class="depoimentos">
+    <div class="container">
+      <h2>Depoimentos de clientes em São José do Rio Preto</h2>
+      
+      <div class="depoimento">
+        <p>"Fiquei muito satisfeito com o atendimento da One’ar. O técnico chegou no horário, fez a instalação com cuidado e deixou tudo limpo. Recomendo para quem precisa." </p>
+        <div class="cliente">– Cliente comercial, São José do Rio Preto</div>
+      </div>
+      
+      <div class="depoimento">
+        <p>"Fiz higienização dos aparelhos da loja e senti a diferença no ar. Atendimento profissional e preço justo." </p>
+        <div class="cliente">– Loja de varejo, São José do Rio Preto</div>
+      </div>
+      
+      <p>“E muitas outras pessoas atendidas em São José do Rio Preto e região.”</p>
     </div>
-    <div class="testimonial">
-      <p>“Tive um problema eletrônico no meu split inverter e eles resolveram no mesmo dia. Profissionais de verdade!”</p>
-      <h4>— André P.</h4>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 One’ar – Climatização & Manutenção.</p>
+      <p>Conecte‑se conosco: <a href="https://www.facebook.com/seuPerfil" target="_blank">Facebook</a> | <a href="https://www.instagram.com/seuPerfil" target="_blank">Instagram</a></p>
+      <p>Telefone/WhatsApp: (00) 00000‑0000 • São José do Rio Preto – SP</p>
     </div>
-  </div>
-</section>
-
-<!-- CTA Solicitar Orçamento -->
-<section class="cta-section">
-  <a class="btn-primary" href="https://wa.me/5517996439982" target="_blank">📲 Solicitar Orçamento</a>
-</section>
-
-<!-- WhatsApp Flutuante -->
-<a class="whatsapp-float" href="https://wa.me/5517996439982" target="_blank">💬</a>
-
-<footer>© 2025 One’Ar – Climatização profissional • São José do Rio Preto</footer>
+  </footer>
 
 </body>
 </html>
