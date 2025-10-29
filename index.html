@@ -3,247 +3,88 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>One'Ar | Climatização perfeita para seu ambiente</title>
-<meta name="description" content="One'Ar - Instalação, higienização, manutenção e conserto de ar-condicionado. Conforto, eficiência e ar puro.">
-<meta name="theme-color" content="#0b0e3f" />
+<title>One'Ar | Climatização perfeita</title>
+<meta name="description" content="One'Ar - Instalação, higienização, manutenção e conserto de ar-condicionado. Conforto e ar puro.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#f9fafb;
-  --primary:#0b0e3f;
-  --accent:#00aaff;
-  --accent-2:#25d366;
-  --muted:#6b7280;
-  --card:#fff;
-  --radius:12px;
-  --shadow:0 8px 20px rgba(11,14,63,0.06);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#0f1724;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-
-/* Header */
-header{
-  position:sticky;top:0;z-index:60;
-  background:var(--primary);color:#fff;padding:12px clamp(16px,4vw,40px);
-  display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 6px 18px rgba(2,6,23,0.12);
-}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{height:48px;width:auto}
-nav{display:flex;align-items:center;gap:14px}
-nav a{color:rgba(255,255,255,0.92);padding:8px 12px;border-radius:8px;font-weight:600;transition:all .18s}
-nav a:hover{background:rgba(255,255,255,0.06)}
-.btn-primary{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
-.nav-toggle{display:none;background:transparent;border:0;color:#fff;font-size:22px}
-@media (max-width:880px){nav{display:none;flex-direction:column;gap:0;position:absolute;top:64px;left:0;width:100%;background:var(--primary)}.nav-toggle{display:inline-flex;align-items:center;gap:8px}}
-
-/* Hero */
-.hero{position:relative;padding:56px clamp(20px,4vw,48px);display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;min-height:56vh}
-.hero-left{max-width:700px}
-.eyebrow{display:inline-block;background:rgba(11,14,63,0.06);color:var(--primary);padding:6px 10px;border-radius:999px;font-weight:600;margin-bottom:14px}
-.hero h1{font-size:clamp(1.6rem,3.2vw,2.4rem);color:var(--primary);margin:0 0 12px;line-height:1.06}
-.lead{color:var(--muted);font-size:1.05rem;margin-bottom:18px;line-height:1.6}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-.stats{display:flex;gap:14px;margin-top:22px}
-.stat{background:var(--card);padding:10px 14px;border-radius:10px;box-shadow:var(--shadow);min-width:110px;text-align:center}
-.stat strong{display:block;font-size:1.1rem;color:var(--primary)}
-.hero-card{border-radius:14px;overflow:hidden;box-shadow: var(--shadow);background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));position:relative}
-.hero-media{width:100%;height:100%;display:block;aspect-ratio:4/3;object-fit:cover}
-.hero-badge{position:absolute;left:12px;top:12px;background:var(--primary);color:#fff;padding:8px 10px;border-radius:10px;font-weight:700;font-size:0.9rem}
-
-/* Services */
-.services{padding:36px clamp(20px,4vw,48px)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s}
-.card h3{margin:10px 0 6px;color:var(--primary)}
-.card p{color:var(--muted);margin:0;font-size:0.95rem;line-height:1.45}
-.card img{border-radius:12px;margin-bottom:8px}
-
-/* Gallery */
-.gallery-wrap{padding:36px clamp(20px,4vw,48px)}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.gallery-item{position:relative;border-radius:12px;overflow:hidden;cursor:pointer;background:#f3f6fa}
-.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
-.gallery-item:hover img{transform:scale(1.04)}
-.gallery-caption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.45);color:#fff;padding:8px 10px;border-radius:8px;font-weight:600;font-size:0.95rem}
-
-/* Testimonials */
-.testimonials{padding:36px clamp(20px,4vw,48px)}
-.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.testimonial{background:linear-gradient(180deg,#f8fbff,#ffffff);padding:14px;border-radius:12px;box-shadow:0 10px 30px rgba(11,14,63,0.04)}
-.testimonial p{color:#26303b;font-style:italic;margin:0 0 8px}
-.testimonial h4{margin:0;color:var(--primary);font-weight:700;font-size:0.95rem}
-
-/* CTA */
-.cta{padding:28px clamp(20px,4vw,48px);border-radius:12px;margin:18px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(90deg,#0b0e3f,#08103a);color:#fff}
-.cta .cta-text{max-width:700px}
-.cta h2{margin:0 0 6px;font-size:1.2rem}
-.cta p{margin:0;color:rgba(255,255,255,0.92)}
-
-footer{padding:18px;text-align:center;color:#6b7280;background:transparent;margin-top:8px}
-
-.whatsapp-float{position:fixed;right:18px;bottom:18px;background:var(--accent-2);color:#fff;width:52px;height:52px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 8px 20px rgba(37,211,102,0.14)}
-
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(4,8,20,0.6);z-index:120;padding:18px}
-.modal.open{display:flex}
-.modal .modal-card{max-width:1000px;width:100%;border-radius:10px;overflow:hidden;background:#07102a;display:grid;grid-template-columns:1fr 300px;gap:0}
-.modal .modal-img{width:100%;height:100%;object-fit:cover}
-.modal .modal-side{padding:14px;color:#fff;background:linear-gradient(180deg,#07102a,#07142e)}
-.modal .close{background:rgba(255,255,255,0.06);border:0;color:#fff;padding:8px 10px;border-radius:10px;font-weight:700;cursor:pointer}
-
-@media (max-width:960px){.hero{grid-template-columns:1fr;min-height:56vh;padding-top:28px;padding-bottom:28px}.modal .modal-card{grid-template-columns:1fr}.modal .modal-side{display:none}}
-@media (max-width:560px){.hero h1{font-size:1.45rem}}
-
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:none}
+body{margin:0;font-family:"Poppins",sans-serif;background:#f9fafb;color:#0f1724;}
+a{text-decoration:none;color:inherit;}
+header{background:#0b0e3f;color:#fff;padding:12px 24px;text-align:center;font-weight:700;}
+h2{color:#0b0e3f;margin-bottom:12px;}
+section{padding:36px 24px;}
+.services-grid,.test-grid{display:grid;gap:16px;}
+.services-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.card,.testimonial{background:#fff;padding:16px;border-radius:12px;box-shadow:0 8px 20px rgba(11,14,63,0.06);}
+.card img{width:100%;border-radius:12px;margin-bottom:8px;}
+.btn-primary{background:#00aaff;color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;display:inline-block;}
+.whatsapp-float{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 8px 20px rgba(37,211,102,0.14);}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="brand">
-    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4434f3?auto=format&fit=crop&w=80&h=80" alt="One'Ar — logo">
-    <div style="line-height:1">
-      <div style="font-weight:700;color:#fff">One'Ar</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.85)">Climatização profissional</div>
-    </div>
-  </div>
-
-  <nav id="nav">
-    <a href="#servicos">Serviços</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#depoimentos">Depoimentos</a>
-    <a href="#contato" class="btn-primary" target="_blank">WhatsApp</a>
-  </nav>
-
-  <button class="nav-toggle" id="navToggle">☰</button>
+  One'Ar - Climatização perfeita para seu ambiente
 </header>
 
-<main>
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <span class="eyebrow">Soluções em climatização • São José do Rio Preto</span>
-    <h1>Climatização perfeita para sua casa ou empresa</h1>
-    <p class="lead">Especialistas em instalação, higienização, manutenção preventiva e conserto de componentes eletrônicos de ar-condicionado. Garantimos conforto, eficiência e ar de qualidade.</p>
-
-    <div class="hero-ctas">
-      <a class="btn-primary" href="https://wa.me/5517996439982" target="_blank">📲 Solicitar Orçamento</a>
-      <a style="padding:10px 14px;border-radius:10px;background:transparent;color:var(--primary);text-decoration:none;border:1px solid rgba(11,14,63,0.06);" href="#servicos">Ver Serviços</a>
-    </div>
-
-    <div class="stats">
-      <div class="stat"><strong>+2.500</strong>Clientes satisfeitos</div>
-      <div class="stat"><strong>10+</strong>Anos de experiência</div>
-      <div class="stat"><strong>Atendimento</strong>Rápido e garantido</div>
-    </div>
-  </div>
-
-  <div class="hero-card">
-    <div class="hero-badge">Instalação & Conserto • Garantia</div>
-    <img class="hero-media" src="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?auto=format&fit=crop&w=800&h=600" alt="Técnico instalando ar-condicionado profissionalmente">
-  </div>
-</section>
-
-<!-- Services -->
-<section id="servicos" class="services">
-  <h2 style="margin-bottom:12px;color:var(--primary)">Nossos Serviços</h2>
+<!-- Serviços -->
+<section id="servicos">
+  <h2>Nossos Serviços</h2>
   <div class="services-grid">
-    <article class="card reveal"><img src="https://images.unsplash.com/photo-1581091215362-0c6dbab41462?auto=format&fit=crop&w=400&h=300" alt=""><h3>Instalação Profissional</h3><p>Montagem e instalação segura de aparelhos split e sistemas comerciais.</p></article>
-    <article class="card reveal"><img src="https://images.unsplash.com/photo-1581091215370-66e636e5f531?auto=format&fit=crop&w=400&h=300" alt=""><h3>Higienização Completa</h3><p>Remoção de fungos, ácaros e odores garantindo ar puro.</p></article>
-    <article class="card reveal"><img src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=400&h=300" alt=""><h3>Consertos Eletrônicos</h3><p>Diagnóstico e reparo de placas eletrônicas, inverter e VRF.</p></article>
-    <article class="card reveal"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&h=300" alt=""><h3>Manutenção Preventiva</h3><p>Planos periódicos para reduzir falhas e otimizar consumo.</p></article>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091215362-0c6dbab41462?auto=format&fit=crop&w=400&h=300" alt="Instalação Profissional">
+      <h3>Instalação Profissional</h3>
+      <p>Montagem e instalação segura de aparelhos split e sistemas comerciais.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091215370-66e636e5f531?auto=format&fit=crop&w=400&h=300" alt="Higienização Completa">
+      <h3>Higienização Completa</h3>
+      <p>Remoção de fungos, ácaros e odores garantindo ar puro.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=400&h=300" alt="Consertos Eletrônicos">
+      <h3>Consertos Eletrônicos</h3>
+      <p>Diagnóstico e reparo de placas eletrônicas, inverter e VRF.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&h=300" alt="Manutenção Preventiva">
+      <h3>Manutenção Preventiva</h3>
+      <p>Planos periódicos para reduzir falhas e otimizar consumo.</p>
+    </div>
   </div>
 </section>
 
-<!-- Gallery -->
-<section id="galeria" class="gallery-wrap">
-  <h2 style="margin-bottom:12px;color:var(--primary)">Galeria</h2>
-  <div class="gallery-grid">
-    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?auto=format&fit=crop&w=1600&h=1200" data-caption="Instalação profissional"><img src="https://images.unsplash.com/photo-1616627988854-edd1a9a80bd9?auto=format&fit=crop&w=800&h=600" alt=""><div class="gallery-caption">Instalação profissional</div></div>
-    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1598966843831-16e1b8df8b77?auto=format&fit=crop&w=1600&h=1200" data-caption="Higienização eficiente"><img src="https://images.unsplash.com/photo-1598966843831-16e1b8df8b77?auto=format&fit=crop&w=800&h=600" alt=""><div class="gallery-caption">Higienização eficiente</div></div>
-    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=1600&h=1200" data-caption="Componentes e diagnóstico"><img src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=800&h=600" alt=""><div class="gallery-caption">Componentes e diagnóstico</div></div>
-    <div class="gallery-item" data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&h=1200" data-caption="Projetos comerciais"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&h=600" alt=""><div class="gallery-caption">Projetos comerciais</div></div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section id="depoimentos" class="testimonials">
-  <h2 style="margin-bottom:12px;color:var(--primary)">O que nossos clientes dizem</h2>
+<!-- Depoimentos -->
+<section id="depoimentos">
+  <h2>O que nossos clientes dizem</h2>
   <div class="test-grid">
-    <div class="testimonial reveal"><p>“Excelente atendimento! A equipe da One’Ar foi atenciosa, pontual e deixou tudo limpo após a instalação. Ar funcionando perfeitamente!”</p><h4>— Rodrigo S.</h4></div>
-    <div class="testimonial reveal"><p>“Fizeram a higienização do meu ar-condicionado e a diferença foi enorme! O ar ficou bem mais leve. Super recomendo!”</p><h4>— Jhenifer M.</h4></div>
-    <div class="testimonial reveal"><p>“Tive um problema eletrônico no meu split inverter e eles resolveram no mesmo dia. Profissionais de verdade!”</p><h4>— André P.</h4></div>
+    <div class="testimonial">
+      <p>“Excelente atendimento! A equipe da One’Ar foi atenciosa e pontual. Ar funcionando perfeitamente!”</p>
+      <h4>— Rodrigo S.</h4>
+    </div>
+    <div class="testimonial">
+      <p>“Fizeram a higienização do meu ar-condicionado e a diferença foi enorme! O ar ficou mais leve. Super recomendo!”</p>
+      <h4>— Jhenifer M.</h4>
+    </div>
+    <div class="testimonial">
+      <p>“Tive um problema eletrônico no meu split inverter e eles resolveram no mesmo dia. Profissionais de verdade!”</p>
+      <h4>— André P.</h4>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section id="contato" class="cta">
-  <div class="cta-text">
-    <h2>Pronto para climatizar seu ambiente com segurança?</h2>
-    <p>Solicite um orçamento detalhado e agende uma visita técnica. Atendimento rápido e garantia nos serviços.</p>
-  </div>
-  <div class="cta-actions">
-    <a class="btn-primary" href="https://wa.me/5517996439982" target="_blank">📲 Falar no WhatsApp</a>
-    <a style="padding:10px 14px;border-radius:10px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.12);" href="mailto:contato@onear.com.br">✉️ Enviar E-mail</a>
-  </div>
+<!-- Solicitar orçamento -->
+<section style="text-align:center;">
+  <a class="btn-primary" href="https://wa.me/5517996439982" target="_blank">📲 Solicitar Orçamento</a>
 </section>
-</main>
-
-<footer>
-  <p>© 2025 One’Ar – Climatização profissional • Atendimento: São José do Rio Preto e região</p>
-</footer>
 
 <a class="whatsapp-float" href="https://wa.me/5517996439982" target="_blank">💬</a>
 
-<!-- Modal Lightbox -->
-<div id="modal" class="modal" aria-hidden="true">
-  <div class="modal-card">
-    <img id="modal-img" class="modal-img" src="" alt="">
-    <div class="modal-side">
-      <button class="close" id="modalClose">Fechar ✖</button>
-      <p id="modal-caption" style="margin-top:12px"></p>
-    </div>
-  </div>
-</div>
-
-<script>
-// Menu mobile toggle
-const navToggle = document.getElementById('navToggle');
-const nav = document.getElementById('nav');
-navToggle.addEventListener('click',()=>{nav.classList.toggle('open');});
-
-// Reveal animation
-const reveals=document.querySelectorAll('.reveal');
-const revealOnScroll=()=>{
-  reveals.forEach(el=>{
-    const top=el.getBoundingClientRect().top;
-    if(top<window.innerHeight-50){el.classList.add('visible');}
-  });
-}
-window.addEventListener('scroll',revealOnScroll);window.addEventListener('load',revealOnScroll);
-
-// Gallery modal
-const modal=document.getElementById('modal');
-const modalImg=document.getElementById('modal-img');
-const modalCaption=document.getElementById('modal-caption');
-const modalClose=document.getElementById('modalClose');
-
-document.querySelectorAll('.gallery-item').forEach(item=>{
-  item.addEventListener('click',()=>{
-    modal.classList.add('open');
-    modalImg.src=item.dataset.src;
-    modalCaption.textContent=item.dataset.caption;
-    modal.setAttribute('aria-hidden','false');
-  });
-});
-modalClose.addEventListener('click',()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');});
-modal.addEventListener('click',e=>{if(e.target===modal) modal.classList.remove('open');modal.setAttribute('aria-hidden','true');});
-</script>
+<footer style="text-align:center;padding:18px;color:#6b7280;">
+  © 2025 One’Ar – Climatização profissional • São José do Rio Preto
+</footer>
 
 </body>
 </html>
