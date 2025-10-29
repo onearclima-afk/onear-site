@@ -1,174 +1,151 @@
-<!DOCTYPE html> 
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One'Ar Climatização</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f7f9fc;
-      color: #222;
-      overflow-x: hidden;
-    }
-    header {
-      background-color: #0b0e3f;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header img {
-      max-width: 250px;
-    }
-    section {
-      padding: 80px 10%;
-      animation: fadeIn 1s ease-in-out;
-    }
-    h1, h2, h3 {
-      color: #0b0e3f;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-    .service {
-      background-color: #ffffff;
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-    }
-    .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-    }
-    .testimonials {
-      background-color: #ffffff;
-      padding: 80px 10%;
-      text-align: center;
-    }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-    .testimonial {
-      background-color: #f1f3f9;
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .testimonial:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-    }
-    .testimonial p {
-      font-style: italic;
-      color: #333;
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-    .testimonial h4 {
-      color: #0b0e3f;
-      font-weight: 600;
-    }
-    .cta {
-      background-color: #0b0e3f;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .cta a {
-      background-color: #25D366;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .cta a:hover {
-      background-color: #1da851;
-    }
-    footer {
-      background-color: #0b0e3f;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>One'Ar | Climatização Profissional</title>
+<meta name="description" content="One'Ar - Instalação, higienização, manutenção e conserto de ar-condicionado. Conforto e ar puro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary:#0b0e3f;
+  --accent:#00aaff;
+  --whatsapp:#25d366;
+  --bg:#f9fafb;
+  --card:#fff;
+  --shadow:0 8px 20px rgba(11,14,63,0.06);
+}
+body {
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  background:var(--bg);
+  color:#0f1724;
+}
+a{text-decoration:none;color:inherit;}
+header {
+  background:var(--primary);
+  color:#fff;
+  padding:16px 24px;
+  text-align:center;
+  font-weight:700;
+  font-size:1.25rem;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+section {padding:48px 24px;}
+h2 {color:var(--primary); margin-bottom:24px; text-align:center; font-size:1.8rem;}
+.services-grid, .test-grid {display:grid; gap:20px;}
+.services-grid {grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.card, .testimonial {
+  background:var(--card);
+  padding:20px;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  transition:transform .3s, box-shadow .3s;
+}
+.card:hover, .testimonial:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(11,14,63,0.12);
+}
+.card img {width:80px;height:80px;object-fit:cover;border-radius:50%;margin-bottom:16px;}
+.card h3 {margin:12px 0 8px;color:var(--primary);}
+.card p {color:#4b5563; font-size:0.95rem; line-height:1.5;}
+.testimonial p {font-style:italic; color:#26303b; margin-bottom:12px;}
+.testimonial h4 {color:var(--primary); font-weight:600; margin:0;}
+.btn-primary {
+  background:var(--accent);
+  color:#fff;
+  padding:14px 24px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:1rem;
+  display:inline-block;
+  transition:background .25s;
+}
+.btn-primary:hover {background:#008ecc;}
+.whatsapp-float {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:var(--whatsapp);
+  color:#fff;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  box-shadow:0 8px 20px rgba(37,211,102,0.25);
+  z-index:1000;
+}
+.cta-section {text-align:center; margin-top:32px;}
+footer {text-align:center; padding:18px; color:#6b7280;}
+@media(max-width:560px){h2{font-size:1.5rem;}}
+</style>
 </head>
 <body>
-  <header>
-    <img src="Climatização perfeita para seu ambiente (1).png" alt="Logo One'Ar">
-    <h1>Climatização perfeita para seu ambiente</h1>
-  </header>
 
-  <section>
-    <h2>Serviços Especializados</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Instalação</h3>
-        <p>Instalação profissional de ar-condicionado split e sistemas comerciais, garantindo eficiência e durabilidade.</p>
-      </div>
-      <div class="service">
-        <h3>Higienização</h3>
-        <p>Limpeza completa do sistema de climatização, eliminando fungos e bactérias e melhorando a qualidade do ar.</p>
-      </div>
-      <div class="service">
-        <h3>Manutenção Preventiva</h3>
-        <p>Evite imprevistos com nossos planos de manutenção preventiva, ideais para residências e comércios.</p>
-      </div>
-      <div class="service">
-        <h3>Consertos Eletrônicos</h3>
-        <p>Reparo e diagnóstico de placas eletrônicas de sistemas inverter e VRF.</p>
-      </div>
-      <div class="service">
-        <h3>Elétrica</h3>
-        <p>Serviços elétricos especializados voltados para climatização e eficiência energética.</p>
-      </div>
+<header>One'Ar - Climatização Profissional</header>
+
+<!-- Serviços -->
+<section id="servicos">
+  <h2>Nossos Serviços</h2>
+  <div class="services-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091215362-0c6dbab41462?auto=format&fit=crop&w=80&h=80" alt="Instalação">
+      <h3>Instalação Profissional</h3>
+      <p>Montagem e instalação segura de aparelhos split e sistemas comerciais.</p>
     </div>
-  </section>
-
-  <section class="testimonials">
-    <h2>O que nossos clientes dizem</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial">
-        <p>“Excelente atendimento! A equipe da One’Ar foi super atenciosa, pontual e deixou tudo limpo após a instalação. Ar funcionando perfeitamente!”</p>
-        <h4>— Rodrigo S., São José do Rio Preto</h4>
-      </div>
-      <div class="testimonial">
-        <p>“Fizeram a higienização do meu ar-condicionado e a diferença foi enorme! O ar ficou bem mais leve. Super recomendo!”</p>
-        <h4>— Jhenifer M., Cedral</h4>
-      </div>
-      <div class="testimonial">
-        <p>“Tive um problema eletrônico no meu split inverter e eles resolveram no mesmo dia. Profissionais de verdade!”</p>
-        <h4>— André P., Mirassol</h4>
-      </div>
-      <div class="testimonial">
-        <p>“Excelente custo-benefício. Fiz contrato de manutenção preventiva com a One’Ar e nunca mais tive dores de cabeça com o sistema.”</p>
-        <h4>— Carla T., Rio Preto</h4>
-      </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091215370-66e636e5f531?auto=format&fit=crop&w=80&h=80" alt="Higienização">
+      <h3>Higienização Completa</h3>
+      <p>Remoção de fungos, ácaros e odores garantindo ar puro.</p>
     </div>
-  </section>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1624464094257-c05a2bb20c6e?auto=format&fit=crop&w=80&h=80" alt="Consertos">
+      <h3>Consertos Eletrônicos</h3>
+      <p>Diagnóstico e reparo de placas eletrônicas, inverter e VRF.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=80&h=80" alt="Manutenção">
+      <h3>Manutenção Preventiva</h3>
+      <p>Planos periódicos para reduzir falhas e otimizar consumo.</p>
+    </div>
+  </div>
+</section>
 
-  <section class="cta">
-    <h2>Solicite um orçamento agora mesmo!</h2>
-    <p>Atendimento rápido via WhatsApp. Clique no botão abaixo e fale direto com nossa equipe.</p>
-    <a href="https://wa.me/5517996439982" target="_blank">Chamar no WhatsApp</a>
-  </section>
+<!-- Depoimentos -->
+<section id="depoimentos">
+  <h2>O que nossos clientes dizem</h2>
+  <div class="test-grid">
+    <div class="testimonial">
+      <p>“Excelente atendimento! A equipe da One’Ar foi atenciosa e pontual. Ar funcionando perfeitamente!”</p>
+      <h4>— Rodrigo S.</h4>
+    </div>
+    <div class="testimonial">
+      <p>“Fizeram a higienização do meu ar-condicionado e a diferença foi enorme! O ar ficou mais leve. Super recomendo!”</p>
+      <h4>— Jhenifer M.</h4>
+    </div>
+    <div class="testimonial">
+      <p>“Tive um problema eletrônico no meu split inverter e eles resolveram no mesmo dia. Profissionais de verdade!”</p>
+      <h4>— André P.</h4>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 One’Ar Climatização - Climatização perfeita para seu ambiente.</p>
-  </footer>
+<!-- CTA Solicitar Orçamento -->
+<section class="cta-section">
+  <a class="btn-primary" href="https://wa.me/5517996439982" target="_blank">📲 Solicitar Orçamento</a>
+</section>
+
+<!-- WhatsApp Flutuante -->
+<a class="whatsapp-float" href="https://wa.me/5517996439982" target="_blank">💬</a>
+
+<footer>© 2025 One’Ar – Climatização profissional • São José do Rio Preto</footer>
+
 </body>
 </html>
